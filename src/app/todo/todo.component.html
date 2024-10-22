@@ -1,0 +1,35 @@
+<div class="table">
+  <div class="top-table">
+    <div class="search-bar">
+      <input class="search" type="search" placeholder="Search here" name="search" [(ngModel)]="searchQuery" (input)="searchFilter()" id="1" />
+      <img class="" src="./../../assets/search.svg" alt="search" />
+    </div>
+    <button class="button-add btn" routerLink="/addtask" routerLinkActive="active">Add task +</button>
+  </div>
+  <table class="table tabledata table-light">
+    <thead>
+      <tr>
+        <th scope="col" style="width: 10%;">Sl.No</th>
+        <th scope="col" style="width: 20%;">Name</th>
+        <th scope="col" style="width: 50%;">Description</th>
+        <th scope="col" style="width: 20%;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of filteredTodos; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td class="d-flex">
+          <div [routerLink]="'/edittask/' + item.id" routerLinkActive="active" class="pipe">
+            <img class="action-button me-1" title="Edit task" src="./../../assets/edit.svg" alt="edit">
+          </div>
+          <div (click)="deleteData(item.id)">
+            <img class="action-button ms-1" src="./../../assets/delete.svg" title="Delete task" alt="delete">
+          </div>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>

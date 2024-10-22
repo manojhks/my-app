@@ -1,0 +1,48 @@
+<div class="content">
+  <h2>Edit task</h2>
+  <div class="">
+    <form [formGroup]="myForm" (ngSubmit)="onEdit()">
+      <div class="row mb-3">
+        <div class="col-sm-12 col-md-6 col-xl-6">
+          <div class="form-group">
+            <label>Name</label><span class="fst-italic text-danger">*</span
+            ><br />
+            <input
+              class="form-control"
+              type="text"
+              formControlName="name"
+              name="name"
+            />
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-6">
+          <div class="form-group">
+            <label>Description</label
+            ><span class="fst-italic text-danger">*</span><br />
+            <input
+              type="text"
+              class="form-control"
+              formControlName="description"
+              name="description"
+            />
+          </div>
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="btn btn-outline-success me-1"
+        [disabled]="myForm.invalid"
+      >
+        Save
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger"
+        routerLink="/todolist"
+        routerLinkActive="active"
+      >
+        Cancel
+      </button>
+    </form>
+  </div>
+</div>

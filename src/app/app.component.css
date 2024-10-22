@@ -1,0 +1,92 @@
+*,
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+.button-ham {
+  background: none;
+  border: none;
+  filter: drop-shadow(1px 1px black);
+}
+.button-ham:hover {
+  filter: drop-shadow(2px 2px black);
+}
+.card {
+  height: fit-content;
+  width: 100%;
+  background-color: blue;
+  color: white;
+}
+.li {
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+li:hover {
+  background-color: #616161;
+}
+.a {
+  display: none;
+  text-decoration: none;
+  padding: 20px auto;
+  color: #dcdcdc;
+  font-size: small;
+}
+button {
+  padding: 10px 20px;
+  margin: 10px auto;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.button-bar {
+  background-color: #bababa;
+}
+
+.dash-content {
+  display: flex;
+}
+.left.open {
+  width: 150px;
+  transition: 0.2s ease-out;
+  .li {
+    .a {
+      display: block;
+      font-size: medium;
+    }
+    .icon {
+      display: none;
+    }
+  }
+}
+.left {
+  width: 50px;
+  background-color: #00000088;
+  height: 100vh;
+transition: 0.3s ease-out;
+}
+
+.right {
+  padding: 10px;
+  width: 100%;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  padding: 20px auto;
+}
+@keyframes navbar {
+  from {
+    left: -100px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}

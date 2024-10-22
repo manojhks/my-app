@@ -1,0 +1,33 @@
+.top-table{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 6px;
+}
+.search,.button,.button-add{
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+.button-add:hover{
+  background: #dadada;
+}
+.search{
+  padding-left: 30px;
+}
+.pipe{
+  border-right: 2px solid rgb(156, 156, 156);
+}
+.action-button{
+  border-radius: 3px;
+}
+.action-button:hover{
+  box-shadow: 1px 1px 2px black;
+}
+.search-bar{
+  position: relative;
+}
+.search-bar img{
+  position: absolute;
+  left: 0;
+  top: 3px;
+  background: transparent;
+}
